@@ -25,3 +25,11 @@
 .product__description {
     text-align: center;
 }
+
+.card__image {
+    height: 25rem;
+}
+
+.card__image img {
+    height: 100%;
+}
