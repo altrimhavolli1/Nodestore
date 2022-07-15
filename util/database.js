@@ -8,20 +8,6 @@ mongoose.connect("mongodb://localhost:27017/nodeStore", {
 const connect = mongoose.connection;
 
 connect.on("connected", () => {
-  User.findOne()
-    .then((user) => {
-      if (!user) {
-        const user = new User({
-          name: "Trimi",
-          email: "trimi@trimi.com",
-          cart: {
-            items: [],
-          },
-        });
-        user.save();
-      }
-    })
-    .catch((err) => console.log(err));
   console.log("database is connected successfully");
 });
 connect.on("disconnected", () => {
